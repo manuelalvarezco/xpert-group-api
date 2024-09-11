@@ -1,4 +1,4 @@
-import * as service from "../services/breeds.service";
+import * as service from "../services/breeds/breeds.service";
 
 export const findBreeds = async (req: any, res: any) => {
   try {
@@ -20,7 +20,7 @@ export const findBreeds = async (req: any, res: any) => {
 
 export const findBreedById = async (id: string, res: any) => {
   try {
-    const response = await service.findBreedBtId(id);
+    const response = await service.findBreedsById(id);
     const data = await response.json();
     res.json(data);
   } catch (error) {
@@ -30,7 +30,7 @@ export const findBreedById = async (id: string, res: any) => {
 
 export const findBreedBySearch = async (params: any, res: any) => {
   console.log('params', params);
-  
+
   try {
     const response = await service.findBreeds({});
     const data = await response.json();

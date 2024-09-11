@@ -1,6 +1,6 @@
 export const queryParams = (query: any) => {
   return {
-    size: query.size || 'med',
+    size: query.size || 'large',
     mime_types: 'jpg',
     format: 'json',
     has_breeds: query.has_breeds || true,
