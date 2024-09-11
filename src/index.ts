@@ -1,6 +1,6 @@
 import express from "express";
 import { routerApi } from "./routes";
-//import dbConnection from "./database/config";
+import dbConnection from "./database/config";
 const app = express();
 
 app.use(express.json());
@@ -12,7 +12,7 @@ app.get("/ping", (_req, res) => {
 });
 
 
-//dbConnection();
+dbConnection();
 
 
 routerApi(app);
