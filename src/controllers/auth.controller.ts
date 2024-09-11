@@ -29,6 +29,7 @@ export const login = async (req: any, res: any) => {
 
     res.json({
       ok: true,
+      user,
       token
     })
 
